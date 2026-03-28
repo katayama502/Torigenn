@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>焼鳥屋-とりげん | 島根県益田市の本格焼鳥</title>
+    <title>焼鳥屋 鳥げん | 島根県益田市の本格職人焼鳥</title>
+    <meta name="description" content="島根県益田市にある焼鳥屋「鳥げん」。一本一本丁寧に手打ちした新鮮な鶏肉を、職人の技で焼き上げる本格焼鳥。地元・益田の地酒と共に、ライブ感溢れるカウンター席で至福のひとときを。">
+    <meta name="keywords" content="鳥げん,益田市,焼鳥,焼き鳥,島根県,居酒屋,地酒,一串入魂">
+    
+    <!-- OGP / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="焼鳥屋 鳥げん | 島根県益田市の本格職人焼鳥">
+    <meta property="og:description" content="一本一串に魂を込めた、益田市で愛される本格焼鳥屋。職人選りすぐりの鶏と地酒を。">
+    <meta property="og:image" content="./img/yaki5.png">
+    <meta property="og:site_name" content="焼鳥屋 鳥げん">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="焼鳥屋 鳥げん | 島根県益田市">
+    <meta name="twitter:description" content="一本一串に魂を込めた、益田市で愛される本格焼鳥屋。">
+    <meta name="twitter:image" content="./img/yaki5.png">
+
+    <link rel="canonical" href="">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500&family=Zen+Kurenaido&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-bg: #f8f5f0; /* 生成り */
@@ -90,6 +108,23 @@
             color: var(--accent-gold);
         }
 
+        .accent-font {
+            font-family: 'Zen Kurenaido', cursive !important;
+        }
+
+        /* Structured Data Visual Hide */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
         /* Responsive Font Adjustments */
         @media (max-width: 767px) {
             html {
@@ -100,14 +135,57 @@
             }
         }
     </style>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "焼鳥屋 鳥げん",
+      "image": "https://torigenn.com/img/yaki5.png",
+      "description": "島根県益田市で愛される本格焼鳥屋。職人が一本ずつ手打ちした串を丁寧に焼き上げます。",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "あけぼの東町3-5",
+        "addressLocality": "益田市",
+        "addressRegion": "島根県",
+        "postalCode": "698-0024",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.676692,
+        "longitude": 131.833338
+      },
+      "telephone": "0856-32-9560",
+      "url": "https://torigenn.com",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "18:00",
+        "closes": "23:00"
+      },
+      "servesCuisine": "Japanese, Yakitori",
+      "priceRange": "¥¥¥"
+    }
+    </script>
 </head>
 <body class="antialiased">
 
     <!-- Header / Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center transition-all duration-500" id="main-header">
-        <a href="#" class="text-2xl font-bold tracking-tighter">
-            <span class="vertical-rl inline-block mr-1">とりげん</span>
-        </a>
+        <h1 class="text-2xl font-bold tracking-tighter">
+            <a href="#" class="flex items-center">
+                <span class="vertical-rl inline-block mr-1 accent-font">とりげん</span>
+            </a>
+        </h1>
         
         <nav class="hidden md:flex space-x-12 text-sm tracking-widest uppercase">
             <a href="#concept" class="nav-link">Concept</a>
@@ -141,7 +219,7 @@
         </div>
         
         <div class="relative z-10 text-white text-center">
-            <div class="vertical-rl mx-auto text-3xl md:text-6xl tracking-[1em] leading-loose reveal">
+            <div class="vertical-rl mx-auto text-3xl md:text-6xl tracking-[1em] leading-loose reveal accent-font">
                 一串入魂
             </div>
             <div class="mt-12 text-sm md:text-base tracking-[0.4em] font-light reveal delay-300">
@@ -341,6 +419,10 @@
                             <p>焼鳥屋 鳥げん</p>
                         </div>
                         <div>
+                            <h4 class="font-bold border-b border-stone-300 pb-2 mb-4">電話番号</h4>
+                            <p><a href="tel:0856329560" class="hover:text-accent-gold">0856-32-9560</a></p>
+                        </div>
+                        <div>
                             <h4 class="font-bold border-b border-stone-300 pb-2 mb-4">所在地</h4>
                             <p>〒698-0024<br>島根県益田市あけぼの東町3-5</p>
                         </div>
@@ -376,7 +458,7 @@
     <footer class="bg-white py-12 border-t border-stone-100">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-8 md:mb-0">
-                <span class="vertical-rl text-xl font-bold tracking-widest">とりげん</span>
+                <span class="vertical-rl text-xl font-bold tracking-widest accent-font">とりげん</span>
             </div>
             
             <div class="text-[10px] tracking-[0.2em] text-stone-400 uppercase">
